@@ -2,7 +2,7 @@
  * @Author: john_mactavish 981192661@qq.com
  * @Date: 2025-03-12 09:20:58
  * @LastEditors: john_mactavish 981192661@qq.com
- * @LastEditTime: 2025-03-27 16:15:50
+ * @LastEditTime: 2025-04-02 16:07:52
  * @FilePath: \passengerInfoSearch\web\src\App.vue
 -->
 <script setup>
@@ -48,7 +48,7 @@ const queryVerify = async (row) => {
         time
       }
     })
-
+    console.log(data);
     if (data.data.length == 0) {
       ElMessage.warning(`该旅客没有过检信息`)
     } else {
@@ -117,7 +117,7 @@ const reset = () => {
           <el-table :data="verifyData" empty-text="点击上方乘客姓名查看验证信息">
             <el-table-column prop="CARD_NAME" label="证件名称" width="120" />
             <el-table-column prop="FLIGHT_NO" label="航班号" width="110" />
-            <el-table-column prop="ID_CARD" label="身份证号" min-width="180" />
+            <el-table-column prop="CARD_NO" label="身份证号" min-width="180" />
             <el-table-column prop="CHANNEL" label="验证通道" width="120" />
             <el-table-column prop="VERIFY_TIME" label="验证时间" width="160" />
             <el-table-column prop="GATE" label="登机口" width="100" />
