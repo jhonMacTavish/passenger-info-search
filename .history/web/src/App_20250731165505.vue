@@ -2,7 +2,7 @@
  * @Author: john_mactavish 981192661@qq.com
  * @Date: 2025-03-12 09:20:58
  * @LastEditors: john_mactavish 981192661@qq.com
- * @LastEditTime: 2025-07-31 16:56:19
+ * @LastEditTime: 2025-07-31 16:55:05
  * @FilePath: \passengerInfoSearch\web\src\App.vue
 -->
 <script setup>
@@ -120,8 +120,8 @@ const reset = () => {
             <el-table-column prop="CARD_NO" label="身份证号" min-width="120" />
             <el-table-column prop="CHANNEL" label="验证通道" />
             <el-table-column prop="VERIFY_TIME" label="验证时间" min-width="160" />
-            <el-table-column prop="BOARD_TIME" label="登机时间" min-width="160" />
             <el-table-column prop="GATE" label="登机口" />
+            <el-table-column prop="BOARD_TIME" label="登机时间" min-width="160" />
             <el-table-column label="证件照片">
               <template #default="scope">
                 <el-image style="width: 100px; height: 100px" :src="`http://10.33.113.23:8002${scope.row.PASS_PHOTO}`"

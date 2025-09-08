@@ -2,7 +2,7 @@
  * @Author: john_mactavish 981192661@qq.com
  * @Date: 2025-03-12 09:20:58
  * @LastEditors: john_mactavish 981192661@qq.com
- * @LastEditTime: 2025-07-31 16:56:19
+ * @LastEditTime: 2025-07-31 16:48:40
  * @FilePath: \passengerInfoSearch\web\src\App.vue
 -->
 <script setup>
@@ -96,12 +96,12 @@ const reset = () => {
               </el-table-column>
               <el-table-column prop="FLIGHT_NO" label="航班号" />
               <el-table-column prop="ID_CARD" label="身份证号" min-width="120" />
-              <el-table-column prop="TERMINALL" label="航站楼" />
-              <el-table-column prop="CHECKIN_TIME" label="值机时间" min-width="160" sortable />
-              <el-table-column prop="CHECKIN_WAY" label="值机方式" />
-              <el-table-column prop="BAGGAGE_NUM" label="行李数量" align="center" />
-              <el-table-column prop="CHECKIN_AGENT" label="值机代理" />
-              <el-table-column prop="CHECKIN_OFFCIE" label="值机柜台" />
+              <el-table-column prop="TERMINALL" label="航站楼" width="80" />
+              <el-table-column prop="CHECKIN_TIME" label="值机时间" width="160" sortable />
+              <el-table-column prop="CHECKIN_WAY" label="值机方式" width="100" />
+              <el-table-column prop="BAGGAGE_NUM" label="行李数量" width="90" align="center" />
+              <el-table-column prop="CHECKIN_AGENT" label="值机代理" min-width="120" />
+              <el-table-column prop="CHECKIN_OFFCIE" label="值机柜台" width="110" />
             </el-table>
           </el-skeleton>
         </el-card>
@@ -116,12 +116,12 @@ const reset = () => {
         <el-card shadow="hover" class="table-card">
           <el-table :data="verifyData" empty-text="点击上方乘客姓名查看验证信息">
             <el-table-column prop="CARD_NAME" label="证件名称" width="120" />
-            <el-table-column prop="FLIGHT_NO" label="航班号" />
-            <el-table-column prop="CARD_NO" label="身份证号" min-width="120" />
-            <el-table-column prop="CHANNEL" label="验证通道" />
-            <el-table-column prop="VERIFY_TIME" label="验证时间" min-width="160" />
-            <el-table-column prop="BOARD_TIME" label="登机时间" min-width="160" />
-            <el-table-column prop="GATE" label="登机口" />
+            <el-table-column prop="FLIGHT_NO" label="航班号" width="110" />
+            <el-table-column prop="CARD_NO" label="身份证号" min-width="180" />
+            <el-table-column prop="CHANNEL" label="验证通道" width="120" />
+            <el-table-column prop="VERIFY_TIME" label="验证时间" width="160" />
+            <el-table-column prop="GATE" label="登机口" width="100" />
+            <el-table-column prop="BOARD_TIME" label="登机时间" width="160" />
             <el-table-column label="证件照片">
               <template #default="scope">
                 <el-image style="width: 100px; height: 100px" :src="`http://10.33.113.23:8002${scope.row.PASS_PHOTO}`"
